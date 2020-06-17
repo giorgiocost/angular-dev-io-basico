@@ -9,6 +9,7 @@ import { FooterComponent } from './navegacao/footer/footer.component';
 import { ContatoComponent } from './institucional/contato/contato.component';
 import { SobreComponent } from './institucional/sobre/sobre.component';
 import { rootRouterConfig } from './app.routes';
+import { DataBindingComponent } from './demos/data-binding/data-binding.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { rootRouterConfig } from './app.routes';
     HomeComponent,
     FooterComponent,
     ContatoComponent,
-    SobreComponent
+    SobreComponent,
+    DataBindingComponent
   ],
   imports: [
     BrowserModule,
