@@ -1,14 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-data-binding',
   templateUrl: './data-binding.component.html',
 })
-export class DataBindingComponent implements OnInit {
+export class DataBindingComponent {
 
-  constructor() { }
+ public contadorClique = 10;
+ public urlImagem = "https://angular.io/assets/images/logos/angular/angular.svg";
+ public nome: string;
 
-  ngOnInit(): void {
-  }
+ public AdicionarClick() {
+  this.contadorClique++;
+ }
 
+ zerarContador() {
+  this.contadorClique = 0;
+ }
+
+//  KeyUp(event: { target: HTMLInputElement }): string{
+//   return this.nome = event.target.value;
+//  }
 }

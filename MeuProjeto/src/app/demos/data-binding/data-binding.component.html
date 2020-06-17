@@ -1,1 +1,32 @@
-<p>data-binding works!</p>
+<div class="container main-container">
+    <h3>Interpolation</h3>
+
+    <p>Número de cliques: {{ contadorClique }}</p>
+    <img [src]="urlImagem" width="{{contadorClique}}">
+    
+    <br><br>
+
+    <h3>Property Binding</h3>
+    <button class="btn btn-info" [disabled]="contadorClique < 20">Info</button>
+    <img [src]="urlImagem" [width]="contadorClique">
+
+    <br><br>
+
+    <h3>Event Binding</h3>
+    <button (click)="AdicionarClick()" class="btn btn-warning">Adicionar Click</button>
+    <button (click)="zerarContador()" class="btn btn-danger" [disabled]="contadorClique < 20">Zerar Click</button>
+
+    <h3>Two-Way Binding</h3>
+    <!-- <input type="text" (keyup)="KeyUp($event)" placeholder="Digite seu nome">
+    <span> Seu nome é {{ nome }}</span> -->
+    
+    <!-- <input type="text" [ngModel]="nome" (ngModelChange)='nome = $event' placeholder="Digite seu nome">
+    <br>
+    <br>
+    <label>Seu nome é: {{ nome }}</label> -->
+
+    <input type="text" [(ngModel)]="nome" placeholder="Digite seu nome">
+    <br>
+    <br>
+    <label [ngClass]="nome">Seu nome é: {{ nome }}</label>
+</div>
