@@ -11,6 +11,8 @@ import { ContatoComponent } from './institucional/contato/contato.component';
 import { SobreComponent } from './institucional/sobre/sobre.component';
 import { rootRouterConfig } from './app.routes';
 import { DataBindingComponent } from './demos/data-binding/data-binding.component';
+import { ProdutosService } from './produtos/produtos.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,14 +22,17 @@ import { DataBindingComponent } from './demos/data-binding/data-binding.componen
     FooterComponent,
     ContatoComponent,
     SobreComponent,
-    DataBindingComponent
+    DataBindingComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     FormsModule,
     [RouterModule.forRoot(rootRouterConfig, {useHash: true})],
   ],
-  providers: [],
+  providers: [
+    ProdutosService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
