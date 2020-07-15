@@ -13,6 +13,7 @@ import { rootRouterConfig } from './app.routes';
 import { DataBindingComponent } from './demos/data-binding/data-binding.component';
 import { ProdutosService } from './produtos/produtos.service';
 import { HttpClientModule } from '@angular/common/http';
+import { CadastroComponent } from './demos/reactiveForms/cadastro/cadastro.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
     ContatoComponent,
     SobreComponent,
     DataBindingComponent,
+    CadastroComponent,
   ],
   imports: [
     HttpClientModule,
