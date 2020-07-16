@@ -1,3 +1,50 @@
-<p>
-  cadastro works!
-</p>
+<div class="container main-container">
+  <h4>Demo Cadastro</h4>
+  <hr>
+  <form novalidate (ngSubmit)="adicionarUsuario()" [formGroup]="cadastroForm">
+    <div class="form-horizontal">
+
+      <div class="form-group">
+        <label for="nome" class="col-md-2 control-label">Nome Completo</label>
+        <div class="col-md-10">
+          <input type="text" class="form-control" id="nome" placeholder="Nome" formControlName="nome">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="cpf" class="col-md-2 control-label">CPF</label>
+        <div class="col-md-10">
+          <input type="text" class="form-control" id="cpf" placeholder="CPF" formControlName="cpf">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email" class="col-md-2 control-label">E-mail</label>
+        <div class="col-md-10">
+          <input type="text" class="form-control" id="email" placeholder="E-mail" formControlName="email">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="senha" class="col-md-2 control-label">Senha</label>
+        <div class="col-md-10">
+          <input type="password" class="form-control" id="senha" placeholder="Senha" formControlName="senha">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="confirmarSenha" class="col-md-2 control-label">Confirmar Senha</label>
+        <div class="col-md-10">
+          <input type="password" class="form-control" id="confirmarSenha" placeholder="Confirmar Senha" formControlName="confirmarSenha">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-md-2 col-md-offset-2">
+          <button class="btn btn-success">Registrar</button>
+        </div>
+      </div>
+
+    </div>
+  </form>
+</div>

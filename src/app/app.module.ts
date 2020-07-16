@@ -1,7 +1,7 @@
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './navegacao/menu/menu.component';
@@ -30,6 +30,7 @@ import { CadastroComponent } from './demos/reactiveForms/cadastro/cadastro.compo
     HttpClientModule,
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     [RouterModule.forRoot(rootRouterConfig, {useHash: true})],
   ],
   providers: [
