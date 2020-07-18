@@ -12,6 +12,7 @@ export class CadastroComponent implements OnInit {
   cadastroForm: FormGroup;
 
   usuario: Usuario;
+  formResult = '';
 
   constructor(private fb: FormBuilder) { }
 
@@ -30,15 +31,16 @@ export class CadastroComponent implements OnInit {
     this.cadastroForm = this.fb.group({
       nome: ['', Validators.required],
       cpf: [''],
-      email: [''],
+      email: ['', [Validators.required, Validators.email]],
       senha: [''],
       confirmarSenha: ['']
     });
   }
 
   adicionarUsuario() {
-    let x = this.cadastroForm.value;
+    // let x = this.cadastroForm.value;
     this.usuario = Object.assign({}, this.usuario, this.cadastroForm.value);
+    this.formResult = JSON.stringify(this.cadastroForm.value);
   }
 
 }
