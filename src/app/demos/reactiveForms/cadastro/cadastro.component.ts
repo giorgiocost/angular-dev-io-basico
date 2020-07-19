@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Usuario } from 'src/app/models/usuario';
+import { MASKS, NgBrazilValidators } from 'ng-brazil';
 
 @Component({
   selector: 'app-cadastro',
@@ -10,6 +11,7 @@ import { Usuario } from 'src/app/models/usuario';
 export class CadastroComponent implements OnInit {
 
   cadastroForm: FormGroup;
+  MASKS = MASKS;
 
   usuario: Usuario;
   formResult = '';
@@ -30,7 +32,7 @@ export class CadastroComponent implements OnInit {
     // formBuilder
     this.cadastroForm = this.fb.group({
       nome: ['', Validators.required],
-      cpf: [''],
+      cpf: ['', Validators.required, NgBrazilValidators.cpf],
       email: ['', [Validators.required, Validators.email]],
       senha: [''],
       confirmarSenha: ['']
