@@ -32,7 +32,7 @@ export class CadastroComponent implements OnInit {
     // formBuilder
     this.cadastroForm = this.fb.group({
       nome: ['', Validators.required],
-      cpf: ['', Validators.required, NgBrazilValidators.cpf],
+      cpf: ['', [Validators.required, NgBrazilValidators.cpf]],
       email: ['', [Validators.required, Validators.email]],
       senha: [''],
       confirmarSenha: ['']
