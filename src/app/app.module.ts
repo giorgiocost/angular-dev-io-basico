@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CadastroComponent } from './demos/reactiveForms/cadastro/cadastro.component';
 import { NgBrazil } from 'ng-brazil';
 import { TextMaskModule } from 'angular2-text-mask';
+import { CustomFormsModule } from 'ng2-validation';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { TextMaskModule } from 'angular2-text-mask';
     ReactiveFormsModule,
     TextMaskModule,
     NgBrazil,
+    CustomFormsModule,
     [RouterModule.forRoot(rootRouterConfig, {useHash: true})],
   ],
   providers: [

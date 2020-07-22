@@ -57,6 +57,14 @@
         <label for="senha" class="col-md-2 control-label">Senha</label>
         <div class="col-md-10">
           <input type="password" class="form-control" id="senha" placeholder="Senha" formControlName="senha">
+          <span
+           class="text-danger" 
+           *ngIf="cadastroForm.get('senha').errors?.rangeLength && (cadastroForm.get('senha').dirty || cadastroForm.get('senha').touched)">Valor entre 8 a 12 caracteres
+           </span>
+           <span
+           class="text-danger" 
+           *ngIf="cadastroForm.get('senha').errors?.required && (cadastroForm.get('senha').dirty || cadastroForm.get('senha').touched)">Preencha o campo senha
+           </span>
         </div>
       </div>
 
@@ -64,6 +72,18 @@
         <label for="confirmarSenha" class="col-md-2 control-label">Confirmar Senha</label>
         <div class="col-md-10">
           <input type="password" class="form-control" id="confirmarSenha" placeholder="Confirmar Senha" formControlName="confirmarSenha">
+          <span
+          class="text-danger" 
+          *ngIf="cadastroForm.get('confirmarSenha').errors?.rangeLength && (cadastroForm.get('confirmarSenha').dirty || cadastroForm.get('confirmarSenha').touched)">Valor entre 8 a 12 caracteres
+          </span>
+          <span
+          class="text-danger" 
+          *ngIf="cadastroForm.get('confirmarSenha').errors?.required && (cadastroForm.get('confirmarSenha').dirty || cadastroForm.get('confirmarSenha').touched)">Preencha o campo Confirmar senha
+          </span>
+          <span
+          class="text-danger" 
+          *ngIf="cadastroForm.get('confirmarSenha').errors?.equalTo && (cadastroForm.get('confirmarSenha').dirty || cadastroForm.get('confirmarSenha').touched)">Senha devem ser iguais
+          </span>
         </div>
       </div>
 
