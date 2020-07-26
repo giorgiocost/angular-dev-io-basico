@@ -14,8 +14,6 @@ import { TextMaskModule } from 'angular2-text-mask';
 import { CustomFormsModule } from 'ng2-validation';
 import { NavegacaoModule } from './navegacao/navegacao.module';
 import { AppRoutingModule } from './app.routes';
-import { ProdutoDashboardComponent } from './demos/arquitetura-componentes/produto-dashboard/produto-dashboard.component';
-
 
 @NgModule({
   declarations: [
@@ -24,7 +22,6 @@ import { ProdutoDashboardComponent } from './demos/arquitetura-componentes/produ
     SobreComponent,
     DataBindingComponent,
     CadastroComponent,
-    ProdutoDashboardComponent,
   ],
   imports: [
     NavegacaoModule,
