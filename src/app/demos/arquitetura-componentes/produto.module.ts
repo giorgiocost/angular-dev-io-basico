@@ -5,6 +5,7 @@ import { ProdutoCardDetalheComponent } from './components/produto-card-detalhe/p
 
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
+import { ProdutoRoutingModule } from './produto.route';
 registerLocaleData(localePt);
 
 @NgModule({
@@ -13,7 +14,8 @@ registerLocaleData(localePt);
         ProdutoCardDetalheComponent
     ],
     imports: [ 
-        CommonModule 
+        CommonModule,
+        ProdutoRoutingModule 
     ]
 })
 
