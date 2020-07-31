@@ -9,13 +9,14 @@ import { ProdutosService } from 'src/app/produtos/produtos.service';
 })
 export class ProdutoDashboardComponent implements OnInit {
 
-  produto: Produto[];
+  produtos: Produto[];
   constructor(private produtosService: ProdutosService) { }
 
   ngOnInit(): void {
     this.produtosService.obterProdutos()
     .subscribe(prod => {
-      this.produto = prod;
+      this.produtos = prod;
+      console.log(this.produtos)
     })
   }
 

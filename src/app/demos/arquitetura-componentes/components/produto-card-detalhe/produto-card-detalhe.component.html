@@ -1,12 +1,12 @@
 <div style="padding-bottom: 30px;">
     <div class="card h-100">
         <div style="align-content:center;">
-            <img src="/assets/{{ produto.imagem }}" height="164px" width="253px" alt="">
+            <img src="/assets/{{ produto?.imagem }}" height="164px" width="253px" alt="">
         </div>
 
-        <h4 class="card-title">{{ produto.nome | titlecase }}</h4>
+        <h4 class="card-title">{{ produto?.nome | titlecase }}</h4>
 
-        <!-- <div [ngSwitch]="produto.ativo">
+        <div [ngSwitch]="produto.ativo">
             <p *ngSwitchCase="true">Em estoque</p>
             <p *ngSwitchCase="false">Fora de estoque</p>
         </div>
@@ -26,9 +26,9 @@
         </div>
 
         <div class="card-footer">
-            <a [ngClass]="produto.ativo ? 'btn btn-success' : 'btn btn-danger'" (click)="emitirEvento()" href="javascript:void(0)">
-                <span><span [ngClass]="produto.ativo ? 'fa fa-toggle-on' : 'fa fa-toggle-off'"> </span> Status</span>
+            <a class="btn btn-success">
+                Botão
             </a>
-        </div> -->
+        </div>
     </div>
 </div>

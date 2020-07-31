@@ -1,1 +1,9 @@
-<app-produto-card-detalhe [produto]="produto"></app-produto-card-detalhe>
+<div class="container main-container">
+    <h1>Lista Produtos</h1>
+
+    <div class="row text-center">
+        <app-produto-card-detalhe *ngFor="let produto of produtos"[produto]="produto"></app-produto-card-detalhe>
+    </div>
+</div>
+
+
