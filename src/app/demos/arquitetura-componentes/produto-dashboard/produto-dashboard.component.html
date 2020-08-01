@@ -1,8 +1,12 @@
 <div class="container main-container">
+    
     <h1>Lista Produtos</h1>
 
     <div class="row text-center">
-        <app-produto-card-detalhe *ngFor="let produto of produtos"[produto]="produto"></app-produto-card-detalhe>
+        <app-produto-card-detalhe 
+        *ngFor="let produto of produtos"
+        [produto]="produto"
+        class="col-md-4"></app-produto-card-detalhe>
     </div>
 </div>
 
