@@ -8,7 +8,9 @@
         <app-produto-card-detalhe 
         *ngFor="let produto of produtos"
         [produto]="produto"
-        class="col-md-4"></app-produto-card-detalhe>
+        class="col-md-4"
+        (status)="mudarStatus($event)"
+        ></app-produto-card-detalhe>
     </div>
 </div>
 

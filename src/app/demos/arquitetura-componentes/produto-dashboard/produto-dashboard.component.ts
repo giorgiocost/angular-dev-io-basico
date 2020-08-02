@@ -20,4 +20,9 @@ export class ProdutoDashboardComponent implements OnInit {
     })
   }
 
+  mudarStatus(event: Produto) {
+    console.log(event.ativo);
+    event.ativo = !event.ativo;
+  }
+
 }
