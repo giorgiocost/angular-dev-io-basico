@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ProdutosService } from 'src/app/produtos/produtos.service';
 
 @Component({
   selector: 'app-editar-produto',
@@ -8,12 +9,13 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class EditarProdutoComponent implements OnInit {
 
-  constructor(private router: ActivatedRoute) { }
+  constructor(private router: ActivatedRoute, private produtosService: ProdutosService) { }
 
   ngOnInit(): void {
     this.router.params.subscribe(params => {
-      console.log(params['id']);
-    })
+      this.produtosService.obterProdutoPorId(params['id']).subscribe(_ => console.log('produto'))
+    });
+    
   }
 
 }

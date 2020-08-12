@@ -16,6 +16,17 @@ export class ProdutosService {
       op: op('produtos'),
       method: 'GET'
     }
+    console.log(request.op);
+
+    return this.genericService.appRequest(request);
+  }
+
+  obterProdutoPorId(id: any): Observable<Produto> {
+    const request: any = {
+      op: op('produtos/', id),
+      method: 'GET'
+    }
+    console.log(request);
 
     return this.genericService.appRequest(request);
   }

@@ -11,6 +11,7 @@ export class GenericService {
   
   appRequest(request: any): Observable<any> {
     if(request.method === 'GET'){
+      console.log(request.op);
       return this.http.get<any[]>(request.op);
     }
   }
