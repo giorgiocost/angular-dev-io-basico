@@ -13,9 +13,8 @@ export class EditarProdutoComponent implements OnInit {
 
   ngOnInit(): void {
     this.router.params.subscribe(params => {
-      this.produtosService.obterProdutoPorId(params['id']).subscribe(_ => console.log('produto'))
+      this.produtosService.obterProdutoPorId(params['id']).subscribe(data => console.log('produto', data))
     });
-    
   }
 
 }
