@@ -1,3 +1,4 @@
+import { ActivatedRoute } from '@angular/router';
 import { ProdutoCountComponent } from './../components/produto-count/produto-count.component';
 import { Observable, fromEvent } from 'rxjs';
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
@@ -16,14 +17,19 @@ export class ProdutoDashboardComponent implements OnInit, AfterViewInit {
   @ViewChild(ProdutoCountComponent, { static: false}) contador: ProdutoCountComponent;
   @ViewChild('teste', {static: false}) mensagemTela: ElementRef;
 
-  constructor(private produtosService: ProdutosService) { }
+  constructor(
+    // private produtosService: ProdutosService
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
-    this.produtosService.obterProdutos()
-    .subscribe(prod => {
-      this.produtos = prod;
-      console.log(this.produtos)
-    })
+    this.produtos = this.route.snapshot.data['produtos'];
+    console.log(this.produtos)
+    // this.produtosService.obterProdutos()
+    // .subscribe(prod => {
+    //   this.produtos = prod;
+    //   console.log(this.produtos)
+    // })
   }
 
   mudarStatus(event: Produto) {

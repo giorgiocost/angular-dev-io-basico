@@ -1,3 +1,4 @@
+import { ProdutoResolve } from './service/produto.resolve';
 import { ProdutoAppComponent } from './produto.app.componet';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -8,7 +9,13 @@ const produtoRouterConfig: Routes = [
     { 
         path: '', component: ProdutoAppComponent,
         children: [
-            { path: '', component: ProdutoDashboardComponent },
+            { path: '', redirectTo: 'todos'},
+            { path: ':estado', 
+                component: ProdutoDashboardComponent,
+                resolve: {
+                    produtos: ProdutoResolve
+                }
+            },
             { path: 'editar/:id', component: EditarProdutoComponent },
         ] 
     },

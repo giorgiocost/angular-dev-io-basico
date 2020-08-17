@@ -23,7 +23,7 @@ const rootRouterConfig: Routes = [
 
 @NgModule({
     imports: [
-        RouterModule.forRoot(rootRouterConfig, { useHash: true }),
+        RouterModule.forRoot(rootRouterConfig, { useHash: true, enableTracing: false }),
     ],
     exports: [
         RouterModule

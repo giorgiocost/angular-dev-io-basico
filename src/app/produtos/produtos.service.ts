@@ -4,7 +4,6 @@ import { Produto } from './produto';
 import { GenericService } from './generic.service';
 import { op } from '../operacao/OpKey';
 import { tap } from 'rxjs/operators';
-import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -21,6 +20,13 @@ export class ProdutosService {
     console.log(request.op);
 
     return this.genericService.appRequest(request);
+  }
+
+  obterTodos(estado: any): any {
+    return this.obterProdutos()
+    .pipe(
+      tap(data => console.log('aplicar filtro', data)),
+    )
   }
 
   obterProdutoPorId(id: any): Observable<Produto> {
