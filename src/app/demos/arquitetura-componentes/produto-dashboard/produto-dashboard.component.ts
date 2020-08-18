@@ -24,7 +24,7 @@ export class ProdutoDashboardComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.produtos = this.route.snapshot.data['produtos'];
-    console.log(this.produtos)
+    console.log(this.route.snapshot.data['teste'])
     // this.produtosService.obterProdutos()
     // .subscribe(prod => {
     //   this.produtos = prod;
