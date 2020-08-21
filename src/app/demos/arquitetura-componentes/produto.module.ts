@@ -10,7 +10,8 @@ import localePt from '@angular/common/locales/pt';
 import { ProdutoRoutingModule } from './produto.route';
 import { EditarProdutoComponent } from './editar-produto/editar-produto.component';
 import { ProdutoResolve } from './service/produto.resolve';
-import { FilmesComponent } from './pipes/filmes/filmes.component';
+import { FilmesComponent } from '../pipes/filmes/filmes.component';
+
 registerLocaleData(localePt);
 
 @NgModule({

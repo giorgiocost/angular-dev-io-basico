@@ -14,7 +14,6 @@ import { TextMaskModule } from 'angular2-text-mask';
 import { CustomFormsModule } from 'ng2-validation';
 import { NavegacaoModule } from './navegacao/navegacao.module';
 import { AppRoutingModule } from './app.routes';
-import { FilmesComponent } from './filmes/filmes.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +22,6 @@ import { FilmesComponent } from './filmes/filmes.component';
     SobreComponent,
     DataBindingComponent,
     CadastroComponent,
-    FilmesComponent,
   ],
   imports: [
     NavegacaoModule,
