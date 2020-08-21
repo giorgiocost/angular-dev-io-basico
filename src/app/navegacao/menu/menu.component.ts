@@ -29,7 +29,13 @@ export class MenuComponent {
       name: 'Produtos',
       exact: false,
       admin: false
-    }
+    },
+    {
+      link: '/filmes',
+      name: 'Filmes',
+      exact: true,
+      admin: false
+    },
   ]
 }
 

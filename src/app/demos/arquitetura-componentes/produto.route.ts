@@ -1,3 +1,4 @@
+import { FilmesComponent } from './../pipes/filmes/filmes.component';
 import { ProdutoResolve } from './service/produto.resolve';
 import { ProdutoAppComponent } from './produto.app.componet';
 import { NgModule } from '@angular/core';
@@ -19,7 +20,7 @@ const produtoRouterConfig: Routes = [
                     teste: 'info'
                 }
             },
-            { path: 'editar/:id', component: EditarProdutoComponent },
+            { path: 'editar/:id', component: EditarProdutoComponent }
         ] 
     },
 ];

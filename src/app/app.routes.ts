@@ -6,6 +6,7 @@ import { ContatoComponent } from './institucional/contato/contato.component';
 import { HomeComponent } from './navegacao/home/home.component';
 import { CadastroComponent } from './demos/reactiveForms/cadastro/cadastro.component';
 import { NotFoundComponent } from './navegacao/not-found/not-found.component';
+import { FilmesComponent } from './demos/pipes/filmes/filmes.component';
 
 const rootRouterConfig: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -14,6 +15,7 @@ const rootRouterConfig: Routes = [
     { path: 'sobre', component: SobreComponent},
     { path: 'feature-data-binding', component: DataBindingComponent},
     { path: 'cadastro', component: CadastroComponent},
+    { path: 'filmes', component: FilmesComponent },
     { path: 'produtos', 
     loadChildren: () => import('./demos/arquitetura-componentes/produto.module')
         .then(m => m.ProdutoModule)
