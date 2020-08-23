@@ -16,6 +16,7 @@ import { NavegacaoModule } from './navegacao/navegacao.module';
 import { AppRoutingModule } from './app.routes';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
+import { FileSizePipe } from './demos/pipes/filmes/file-size.pipe';
 registerLocaleData(localePt);
 
 @NgModule({
@@ -25,6 +26,7 @@ registerLocaleData(localePt);
     SobreComponent,
     DataBindingComponent,
     CadastroComponent,
+    FileSizePipe,
   ],
   imports: [
     NavegacaoModule,
