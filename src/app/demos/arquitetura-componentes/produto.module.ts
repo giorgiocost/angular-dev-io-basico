@@ -8,6 +8,7 @@ import { ProdutoRoutingModule } from './produto.route';
 import { EditarProdutoComponent } from './editar-produto/editar-produto.component';
 import { ProdutoResolve } from './service/produto.resolve';
 import { FilmesComponent } from '../pipes/filmes/filmes.component';
+import { FileSizePipe } from '../pipes/filmes/file-size.pipe';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { FilmesComponent } from '../pipes/filmes/filmes.component';
         ProdutoCountComponent,
         EditarProdutoComponent,
         FilmesComponent,
+        FileSizePipe  
     ],
     providers: [
         ProdutoResolve,
