@@ -9,6 +9,7 @@ import { EditarProdutoComponent } from './editar-produto/editar-produto.componen
 import { ProdutoResolve } from './service/produto.resolve';
 import { FilmesComponent } from '../pipes/filmes/filmes.component';
 import { FileSizePipe } from '../pipes/filmes/file-size.pipe';
+import { ImageFormatPipe } from '../pipes/image-format.pipe';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { FileSizePipe } from '../pipes/filmes/file-size.pipe';
         ProdutoCountComponent,
         EditarProdutoComponent,
         FilmesComponent,
-        FileSizePipe  
+        FileSizePipe,
+        ImageFormatPipe,  
     ],
     providers: [
         ProdutoResolve,
