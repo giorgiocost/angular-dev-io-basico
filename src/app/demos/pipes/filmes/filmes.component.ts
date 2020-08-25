@@ -1,17 +1,21 @@
+import { ImageFormatPipe } from './../image-format.pipe';
 import { Component, OnInit } from '@angular/core';
 import { Filme } from './filme';
 
 @Component({
   selector: 'app-filmes',
   templateUrl: './filmes.component.html',
-  styleUrls: ['./filmes.component.css']
+  styleUrls: ['./filmes.component.css'],
+  providers: [
+    ImageFormatPipe
+  ]
 })
 export class FilmesComponent implements OnInit {
 
   filmes: Filme[];
   mapped: Filme[];
 
-  constructor() { }
+  constructor(private imageFormatPipe: ImageFormatPipe) { }
 
   ngOnInit() {
 
@@ -48,7 +52,7 @@ export class FilmesComponent implements OnInit {
         nome: 'Pulp Fiction: Tempo de Violência ',
         dataLancamento: new Date('01/08/1994'),
         valor: 190.00,
-        imagem: 'PulpFiction.jpg',
+        imagem: '',
         tamanho: '773039680'
       }
     ];
@@ -59,7 +63,7 @@ export class FilmesComponent implements OnInit {
         dataLancamento: filme.dataLancamento,
         valor: filme.valor,
         tamanho: filme.tamanho,
-        imagem: filme.imagem,
+        imagem: this.imageFormatPipe.transform(filme.imagem, 'default', true),
       }
     });
   }
