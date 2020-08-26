@@ -7,6 +7,7 @@ import { HomeComponent } from './navegacao/home/home.component';
 import { CadastroComponent } from './demos/reactiveForms/cadastro/cadastro.component';
 import { NotFoundComponent } from './navegacao/not-found/not-found.component';
 import { FilmesComponent } from './demos/pipes/filmes/filmes.component';
+import { BarComponent } from './demos/bar-di-zones/bar.component';
 
 const rootRouterConfig: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -16,6 +17,7 @@ const rootRouterConfig: Routes = [
     { path: 'feature-data-binding', component: DataBindingComponent},
     { path: 'cadastro', component: CadastroComponent},
     { path: 'filmes', component: FilmesComponent },
+    { path: 'bar', component: BarComponent },
     { path: 'produtos', 
     loadChildren: () => import('./demos/arquitetura-componentes/produto.module')
         .then(m => m.ProdutoModule)
