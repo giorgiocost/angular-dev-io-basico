@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Provider } from '@angular/core';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 
 import { AppComponent } from './app.component';
@@ -19,6 +19,10 @@ import localePt from '@angular/common/locales/pt';
 import { BarComponent } from './demos/bar-di-zones/bar.component';
 import { BarServices } from './demos/bar-di-zones/bar.service';
 registerLocaleData(localePt);
+
+export const BAR_PROVIDERS: Provider[] = [
+  BarServices
+];
 
 @NgModule({
   declarations: [
@@ -42,7 +46,7 @@ registerLocaleData(localePt);
   ],
   providers: [
     ProdutosService,
-    BarServices,
+    // BAR_PROVIDERS,
   ],
   bootstrap: [AppComponent]
 })
