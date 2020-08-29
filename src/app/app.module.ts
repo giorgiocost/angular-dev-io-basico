@@ -18,6 +18,7 @@ import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 import { BarComponent } from './demos/bar-di-zones/bar.component';
 import { BarServices } from './demos/bar-di-zones/bar.service';
+import { BarModule } from './demos/bar-di-zones/bar.module';
 registerLocaleData(localePt);
 
 export const BAR_PROVIDERS: Provider[] = [
@@ -43,6 +44,10 @@ export const BAR_PROVIDERS: Provider[] = [
     NgBrazil,
     CustomFormsModule,
     AppRoutingModule,
+    BarModule.forRoot({
+      unidadeId: 1000,
+      unidadeToken: '698dc19d489c4e4db73e28a713eab07b'
+    })
   ],
   providers: [
     ProdutosService,
