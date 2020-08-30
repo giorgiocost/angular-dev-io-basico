@@ -16,7 +16,6 @@ import { NavegacaoModule } from './navegacao/navegacao.module';
 import { AppRoutingModule } from './app.routes';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
-import { BarComponent } from './demos/bar-di-zones/bar.component';
 import { BarServices } from './demos/bar-di-zones/bar.service';
 import { BarModule } from './demos/bar-di-zones/bar.module';
 registerLocaleData(localePt);
@@ -32,7 +31,6 @@ export const BAR_PROVIDERS: Provider[] = [
     SobreComponent,
     DataBindingComponent,
     CadastroComponent,
-    BarComponent
   ],
   imports: [
     NavegacaoModule,

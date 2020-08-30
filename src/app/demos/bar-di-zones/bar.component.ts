@@ -1,13 +1,15 @@
+import { HttpClient } from '@angular/common/http';
 import { BarUnidadeConfig } from './bar.config';
 import { Component, OnInit, Inject } from '@angular/core';
-import { BarServices, BarServicesMock } from './bar.service';
+import { BarServices, BarServicesMock, BarFactory } from './bar.service';
 
 @Component({
   selector: 'app-bar',
   templateUrl: './bar.component.html',
   styles: ['h2 { margin-top: 70px}'],
   providers: [
-    { provide: BarServices, useClass: BarServicesMock }
+    // { provide: BarServices, useClass: BarServicesMock },
+    { provide: BarServices, useFactory: BarFactory, deps: [HttpClient]}
   ]
 })
 export class BarComponent implements OnInit {
