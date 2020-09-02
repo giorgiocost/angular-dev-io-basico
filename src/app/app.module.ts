@@ -18,6 +18,7 @@ import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 import { BarServices } from './demos/bar-di-zones/bar.service';
 import { BarModule } from './demos/bar-di-zones/bar.module';
+import { TodoModule } from './todo-list/todo.module';
 registerLocaleData(localePt);
 
 export const BAR_PROVIDERS: Provider[] = [
@@ -45,7 +46,8 @@ export const BAR_PROVIDERS: Provider[] = [
     BarModule.forRoot({
       unidadeId: 1000,
       unidadeToken: '698dc19d489c4e4db73e28a713eab07b'
-    })
+    }),
+    TodoModule,
   ],
   providers: [
     ProdutosService,

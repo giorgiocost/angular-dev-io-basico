@@ -1,3 +1,4 @@
+import { TodoComponent } from './todo-list/todo.component';
 import { NgModule } from '@angular/core';
 import { DataBindingComponent } from './demos/data-binding/data-binding.component';
 import { Routes, RouterModule } from '@angular/router';
@@ -18,6 +19,7 @@ const rootRouterConfig: Routes = [
     { path: 'cadastro', component: CadastroComponent},
     { path: 'filmes', component: FilmesComponent },
     { path: 'bar', component: BarComponent },
+    { path: 'todo', component: TodoComponent },
     { path: 'produtos', 
     loadChildren: () => import('./demos/arquitetura-componentes/produto.module')
         .then(m => m.ProdutoModule)
