@@ -12,7 +12,7 @@ export class TasksFinalizadasComponent implements OnInit {
 
   finalizados$: Observable<any>;
 
-  constructor(private tasksService: TasksService, private store: Store) { }
+  constructor(private store: Store) { }
 
   ngOnInit() { 
     this.finalizados$ = this.store.getTodoList()
