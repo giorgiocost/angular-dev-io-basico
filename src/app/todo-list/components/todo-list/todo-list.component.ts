@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Task } from "../../task";
 
 @Component({
@@ -10,4 +10,12 @@ export class ToDoListComponent {
 
   @Input()
   list: Task[];
+
+  @Output()
+  toggle = new EventEmitter< any>();
+
+  toggleItem(index: number, acao: string ) {
+    const task = this.list[index];
+    console.log(task);
+  }
 }
