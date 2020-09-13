@@ -9,7 +9,7 @@
                 <td>
                     <span>{{ item.nome }}</span>
                     <span *ngIf="!item.finalizado && item.iniciado" (click)="toggleItem(i, 'finalizar')" class="task-list__finalizado"></span>
-                    <span *ngIf="!item.finalizado && !item.iniciado" class="task-list__iniciado" (click)="toggleItem(i, 'iniciar')"></span>
+                    <span *ngIf="!item.finalizado && !item.iniciado" class="task-list__iniciado" (click)="toggleItem(i, 'iniciado')"></span>
                     <span *ngIf="item.finalizado && !item.iniciado" class="task-list__retroceder" (click)="toggleItem(i, 'retomar')"></span>
                     <span *ngIf="!item.finalizado && item.iniciado" class="task-list__retroceder" (click)="toggleItem(i, 'cancelar')"></span>
                 </td>

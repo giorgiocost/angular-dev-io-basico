@@ -4,7 +4,7 @@ import { Task } from "../../task";
 @Component({
   selector: 'todo-list',
   templateUrl: './todo-list.component.html',
-  styleUrls: ['todo-list.component.css']  
+  styleUrls: ['todo-list.component.css']
 })
 export class ToDoListComponent {
 
@@ -12,10 +12,36 @@ export class ToDoListComponent {
   list: Task[];
 
   @Output()
-  toggle = new EventEmitter< any>();
+  toggle = new EventEmitter<any>();
 
-  toggleItem(index: number, acao: string ) {
+  toggleItem(index: number, acao: string) {
     const task = this.list[index];
-    console.log(task);
+
+    switch (acao) {
+      case 'iniciado':
+        console.log(acao);
+        task.finalizado = false;
+        task.iniciado = true;
+        break;
+      case 'finalizar':
+        console.log(acao);
+        task.finalizado = true;
+        task.iniciado = false;
+        break;
+      case 'retomar':
+        console.log(acao);
+        task.finalizado = false;
+        task.iniciado = true;
+        break;
+      case 'cancelar':
+        console.log(acao);
+        task.finalizado = false;
+        task.iniciado = false;
+        break;
+    }
+
+    this.toggle.emit({
+      task: { ...task}
+    });
   }
 }
